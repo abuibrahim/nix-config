@@ -76,7 +76,7 @@
   programs.fish.enable = true;
 
   environment.systemPackages = with pkgs; [
-    sbctl loupe nautilus gnome-calendar file-roller
+    sbctl loupe nautilus gnome-calendar file-roller seahorse
   ];
 
   users.users.${username} = {
