@@ -16,6 +16,7 @@
         catppuccin-theme
         ligature
         rust-mode
+        lua-mode
         treesit-grammars.with-all-grammars
       ];
   };
