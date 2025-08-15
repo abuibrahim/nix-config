@@ -1,21 +1,29 @@
 { ... }:
 {
   imports = [
-    ./catppuccin
     ./bat
-    ./eza
-    ./fzf
-    ./git
-    ./fish
-    ./starship
-    ./ghostty
-    ./direnv
     ./bottom
-    ./emacs
-    ./nixvim
-    ./vscode
-    ./fonts
+    ./catppuccin
     ./dconf
+    ./direnv
+    ./emacs
+    ./eza
+    ./fish
+    ./fonts
+    ./fuzzel
+    ./fzf
+    ./ghostty
+    ./git
+    ./mako
+    ./niri
+    ./nixvim
     ./packages
+    ./polkit-gnome
+    ./starship
+    ./swaybg
+    ./swayidle
+    ./swaylock
+    ./vscode
+    ./waybar
   ];
 }

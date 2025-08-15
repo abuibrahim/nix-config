@@ -1,0 +1,75 @@
+@import "catppuccin.css";
+
+* {
+    border: none;
+    font-family: JetBrainsMono NF;
+    font-size: 16px;
+    color: @text;
+    border-radius: 20px;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+.modules-left {
+    background-color: @base;
+}
+
+.modules-center {
+    background-color: @base;
+}
+
+.modules-right {
+    background-color: @base;
+}
+
+#clock,
+#language,
+#workspaces button#niri-workspace-1 {
+    padding-left: 5px;
+}
+
+#workspaces button {
+    background: transparent;
+    padding: 1px 10px 1px 0px;
+}
+
+#workspaces button:hover {
+    box-shadow: none;
+    text-shadow: none;
+    background: none;
+    transition: none;
+}
+
+#clock,
+#battery,
+#cpu,
+#language,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#bluetooth,
+#custom-lock,
+#custom-quit {
+    padding: 1px 10px;
+}
+
+#idle_inhibitor {
+    padding: 1px 15px;
+}
+
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+}
