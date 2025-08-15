@@ -2,6 +2,7 @@
 {
   imports = [
     ./catppuccin
+    ./eza
     ./git
     ./fish
     ./starship
