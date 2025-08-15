@@ -13,6 +13,7 @@
     ./nixvim
     ./vscode
     ./fonts
+    ./dconf
     ./packages
   ];
 }
