@@ -6,7 +6,12 @@
     enable = true;
     viAlias = true;
     editorconfig.enable = true;
-    colorschemes.catppuccin.enable = true;
+    colorschemes.catppuccin = {
+      enable = true;
+      settings = {
+        transparent_background = true;
+      };
+    };
 
     opts = {
       number = true;
