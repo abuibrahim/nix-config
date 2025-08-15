@@ -33,6 +33,7 @@
         catppuccin.catppuccin-vsc
         catppuccin.catppuccin-vsc-icons
         ms-vscode.cmake-tools
+        ms-python.python
         llvm-vs-code-extensions.vscode-clangd
         vadimcn.vscode-lldb
         haskell.haskell
