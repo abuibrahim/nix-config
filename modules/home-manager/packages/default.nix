@@ -6,7 +6,6 @@
       mosh
       ripgrep
       lsd
-      fzf
       fd
       nixd
       nixfmt-rfc-style

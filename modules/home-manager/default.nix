@@ -4,6 +4,7 @@
     ./catppuccin
     ./bat
     ./eza
+    ./fzf
     ./git
     ./fish
     ./starship
