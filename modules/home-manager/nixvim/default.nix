@@ -18,7 +18,21 @@
     };
 
     plugins = {
-      lualine.enable = true;
+      lualine = {
+        enable = true;
+        settings = {
+          options = {
+            component_separators = {
+              left = "";
+              right = "";
+            };
+            section_separators = {
+              left = "";
+              right = "";
+            };
+          };
+        };
+      };
       lsp = {
         enable = true;
         inlayHints = true;
