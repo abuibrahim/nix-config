@@ -2,6 +2,7 @@
 {
   imports = [
     ./catppuccin
+    ./bat
     ./eza
     ./git
     ./fish
