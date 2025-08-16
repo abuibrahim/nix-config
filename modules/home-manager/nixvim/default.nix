@@ -21,6 +21,7 @@
       lualine.enable = true;
       lsp = {
         enable = true;
+        inlayHints = true;
         servers = {
           nixd.enable = true;
           clangd.enable = true;
