@@ -4,7 +4,7 @@
     enable = pkgs.stdenv.isLinux;
     settings = {
       "org/gnome/desktop/interface" = {
-        monospace-font-name = "JetBrains Mono 11";
+        monospace-font-name = "JetBrains Mono 12";
       };
       "org/gnome/desktop/wm/preferences" = {
         focus-mode = "sloppy";

@@ -5,7 +5,7 @@
     enableFishIntegration = true;
     settings = {
       font-family = "JetBrains Mono";
-      font-size = 11;
+      font-size = 12;
       gtk-titlebar = false;
       background-opacity = 0.9;
       background-blur-radius = 20;
