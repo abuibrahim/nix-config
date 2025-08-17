@@ -6,7 +6,7 @@
     settings = {
       font-family = "JetBrains Mono";
       font-size = 11;
-      gtk-tabs-location = "hidden";
+      gtk-titlebar = false;
       background-opacity = 0.9;
       background-blur-radius = 20;
       background-blur = true;
