@@ -6,5 +6,6 @@
     enable = true;
     flavor = "mocha";
     accent = "lavender";
+    cursors.enable = true;
   };
 }
