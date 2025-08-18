@@ -15,7 +15,7 @@
         "workbench.colorTheme" = "Catppuccin Mocha";
         "workbench.iconTheme" = "catppuccin-mocha";
         "window.autoDetectColorScheme" = true;
-        "editor.fontFamily" = "JetBrains Mono";
+        "editor.fontFamily" = "JetBrainsMono NF";
         "editor.fontLigatures" = true;
         "editor.inlayHints.enabled" = "offUnlessPressed";
         "nix.enableLanguageServer" = true;

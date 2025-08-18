@@ -4,7 +4,7 @@
     enable = pkgs.stdenv.isLinux;
     enableFishIntegration = true;
     settings = {
-      font-family = "JetBrains Mono";
+      font-family = "JetBrainsMono NF";
       font-size = 12;
       gtk-titlebar = false;
       background-opacity = 0.9;

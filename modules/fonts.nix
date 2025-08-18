@@ -2,6 +2,6 @@
 {
   fonts.packages = with pkgs; [
     cascadia-code
-    jetbrains-mono
+    nerd-fonts.jetbrains-mono
   ];
 }
