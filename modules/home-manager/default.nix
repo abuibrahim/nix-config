@@ -4,6 +4,7 @@
     ./bat
     ./bottom
     ./catppuccin
+    ./cursor
     ./dconf
     ./direnv
     ./emacs
