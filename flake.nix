@@ -35,26 +35,64 @@
       darwin,
       ...
     }@inputs:
+    let
+      username = "abdurrahman";
+      nixosHosts = with builtins; attrNames (readDir ./hosts/nixos);
+      darwinHosts = with builtins; attrNames (readDir ./hosts/darwin);
+    in
     {
-      nixosConfigurations.t25 = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {
-          inherit inputs;
-          username = "abdurrahman";
-          hostname = "t25";
-          hmModules = inputs.home-manager.nixosModules;
-        };
-        modules = [ ./hosts/t25 ];
-      };
+      nixosConfigurations = nixpkgs.lib.genAttrs nixosHosts (
+        hostname:
+        nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs username hostname; };
+          modules = [
+            ./hosts/nixos/${hostname}
+            inputs.home-manager.nixosModules.default
+            {
+              home-manager = {
+                useGlobalPkgs = false;
+                useUserPackages = true;
+                extraSpecialArgs = { inherit inputs username hostname; };
+                users.${username} = {
+                  imports = [ ./home ];
+                  home = {
+                    inherit username;
+                    stateVersion = "25.05";
+                    homeDirectory = "/home/${username}";
+                  };
+                };
+              };
+            }
+          ];
+        }
+      );
 
-      darwinConfigurations.agdam = darwin.lib.darwinSystem {
-        system = "aarch64-darwin";
-        specialArgs = {
-          inherit inputs;
-          username = "abdurrahman";
-          hmModules = inputs.home-manager.darwinModules;
-        };
-        modules = [ ./hosts/agdam ];
-      };
+      darwinConfigurations = nixpkgs.lib.genAttrs darwinHosts (
+        hostname:
+        darwin.lib.darwinSystem {
+          system = "aarch64-darwin";
+          specialArgs = { inherit inputs username hostname; };
+          modules = [
+            ./hosts/darwin/${hostname}
+            inputs.home-manager.darwinModules.default
+            {
+              home-manager = {
+                useGlobalPkgs = false;
+                useUserPackages = true;
+                extraSpecialArgs = { inherit inputs username hostname; };
+                users.${username} = {
+                  imports = [ ./home ];
+                  home = {
+                    inherit username;
+                    stateVersion = "25.05";
+                    homeDirectory = "/Users/${username}";
+                  };
+                };
+              };
+            }
+          ];
+        }
+      );
     };
 }

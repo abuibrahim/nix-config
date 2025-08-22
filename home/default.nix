@@ -1,0 +1,29 @@
+{
+  imports = [
+    ./bat
+    ./bottom
+    ./catppuccin
+    ./cursor
+    ./dconf
+    ./direnv
+    ./emacs
+    ./eza
+    ./fish
+    ./fonts
+    ./fuzzel
+    ./fzf
+    ./ghostty
+    ./git
+    ./mako
+    ./niri
+    ./nixvim
+    ./packages
+    ./polkit-gnome
+    ./starship
+    ./swaybg
+    ./swayidle
+    ./swaylock
+    ./vscode
+    ./waybar
+  ];
+}
